@@ -8,6 +8,35 @@ This project aims to give users the capability to host quizzes and exams easily 
 
 # Getting started
 
+# Docker installation on Linux: (Ubuntu and other distros)
+
+    sudo apt-get update
+    sudo apt-get remove docker docker-en
+    gine docker.io
+
+    sudo apt install docker.io
+
+# Docker Installation on RedHat/Centos:
+
+You need to configure yum by adding docker.repo inside
+      /etc/yum.repos.d
+for local installation using: https://download.docker.com/linux/centos/docker-ce.repo  
+
+Then run:
+
+     yum install docker-ce --nobest
+     Starting Docker:
+     systemctl start docker
+# Now install Docker Compose:-
+
+      sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+      sudo chmod +x /usr/local/bin/docker-compose
+
+After installation of the above files:-
+       
+       sudo systemctl start docker
+       sudo systemctl enable docker
+
 # Requirements:
  - Redhat Linux preferably though any Linux system would work
  - Docker
@@ -18,8 +47,8 @@ This project aims to give users the capability to host quizzes and exams easily 
 We just need to have the wordpress and mysql docker images installed for docker:
 You can find all the docker images here : https://hub.docker.com/
 
-   docker pull wordpress:5.1.1-php7.3-apache
-   docker pull mysql:5.7
+      docker pull wordpress:5.1.1-php7.3-apache
+      docker pull mysql:5.7
    
    
 Next we need to setup wordpress and mysql containers
@@ -27,7 +56,7 @@ for this, we will be creating and using a docker-compose file:
  1. You can use the docker-compose.yml file in fresh_build folder to start a fresh setup:
      Run this file using:
     
-     docker-compose up
+         docker-compose up
     
    Note: Make sure u run this command in the same location where u have created the
    
@@ -38,7 +67,7 @@ for this, we will be creating and using a docker-compose file:
 2. You can use the prebuilt setup just to test the see the setup example after it will be done using the files in Test_trial_setup:
      Run this file using:
     
-     docker-compose up
+         docker-compose up
      
      username: aayush
      password: DBpass13
@@ -48,7 +77,13 @@ We have use the previously downloaded images to create containers and attached t
 
 After this setup, we can connect to the wordpress site on <host ip>:1234, we have setup the port forward as 1234 from the port 80 so as to route any traffic coming to port 80 to port 1234
 
-Some useful References:
+#Some useful References:
 https://docs.docker.com/storage/volumes/
+
 https://docs.docker.com/compose/
+
 https://docs.docker.com/compose/wordpress/
+
+https://wordpress.org/plugins/watu/#description
+
+https://demo.pimteam.net/wp/watu-demo/
