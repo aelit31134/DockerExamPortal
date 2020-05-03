@@ -1,0 +1,2 @@
+# DockerExamPortal
+This project aims at making the process of setting up online quizzes and exams easy and to an extent automatic. This is mainly aimed for institutes and I got the idea to create such a project from instances at my college where we would have some regular online exams but they would at times get postponed/cancelled due to so called server issues or non-presence of appropriate technical staff.
