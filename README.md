@@ -78,6 +78,7 @@ We have use the previously downloaded images to create containers and attached t
 After this setup, we can connect to the wordpress site on <host ip>:1234, we have setup the port forward as 1234 from the port 80 so as to route any traffic coming to port 80 to port 1234
 
 #Some useful References:
+
 https://docs.docker.com/storage/volumes/
 
 https://docs.docker.com/compose/
