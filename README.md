@@ -64,7 +64,7 @@ for this, we will be creating and using a docker-compose file:
    
    - Now, we need to setup the watu plugin and for that we will copy it to the wordpress plugin library:
        
-         cp -r /root/Downloads/watu  /var/lib/docker/volumes/project_wp_storage/_data
+         cp -r /root/Downloads/watu  /var/lib/docker/volumes/project_wp_storage/_data/wp-content/plugins
      
    - Make sure u replace the 'project_wp_storage' with your own volume name.
      To check the name of your volume name: (it will be like <something>_wp_storage)
