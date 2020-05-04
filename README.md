@@ -8,6 +8,12 @@ This project aims to give users the capability to host quizzes and exams easily 
 
 # Getting started
 
+# Requirements:
+ - Redhat Linux preferably though any Linux system would work
+ - Docker
+ - Docker-compose
+ - Watu plugin
+ 
 # Docker installation on Linux: (Ubuntu and other distros)
 
     sudo apt-get update
@@ -37,11 +43,6 @@ After installation of the above files:-
        sudo systemctl start docker
        sudo systemctl enable docker
 
-# Requirements:
- - Redhat Linux preferably though any Linux system would work
- - Docker
- - Docker-compose
- - Watu plugin
 
 # Setting up the environment:
 We just need to have the wordpress and mysql docker images installed for docker:
