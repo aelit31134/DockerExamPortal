@@ -35,13 +35,13 @@ Then run:
      systemctl start docker
 # Now install Docker Compose:-
 
-      sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-      sudo chmod +x /usr/local/bin/docker-compose
+      curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+      chmod +x /usr/local/bin/docker-compose
 
 After installation of the above files:-
        
-       sudo systemctl start docker
-       sudo systemctl enable docker
+       systemctl start docker
+       systemctl enable docker
 
 
 # Setting up the environment:
@@ -59,11 +59,17 @@ for this, we will be creating and using a docker-compose file:
     
          docker-compose up
     
-   Note: Make sure u run this command in the same location where u have created the
+   Note: Make sure you run this command in the same location where you have created the docker-compose.yml file
+   eg. if you have created a directory named project in root directory, and created the docker-compose.yml file there, you need to enter        the /project directory and then run the docker-compose up command.
    
-     Now, we need to setup the watu plugin and for that we will copy it to the wordpress plugin library:
+   - Now, we need to setup the watu plugin and for that we will copy it to the wordpress plugin library:
        
-       cp -r /root/Downloads/watu  /var/lib/docker/volumes/project_wp_storage
+         cp -r /root/Downloads/watu  /var/lib/docker/volumes/project_wp_storage/_data
+     
+   - Make sure u replace the 'project_wp_storage' with your own volume name.
+     To check the name of your volume name: (it will be like <something>_wp_storage)
+      
+          docker volume ls
        
 2. You can use the prebuilt setup just to test the see the setup example after it will be done using the files in Test_trial_setup:
      Run this file using:
